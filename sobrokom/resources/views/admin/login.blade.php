@@ -57,15 +57,15 @@
 										<hr/>
 									</div>
 									<div class="form-body">
-										<form class="row g-3">
+										<form class="row g-3" action="{{url('admin/login')}}" method="post">@csrf
 											<div class="col-12">
-												<label for="inputEmailAddress" class="form-label">Email Address</label>
-												<input type="email" class="form-control" id="inputEmailAddress" placeholder="Email Address">
+												<label for="email" class="form-label">Email Address</label>
+												<input type="email" class="form-control" name="email" id="email" placeholder="Email Address" required>
 											</div>
 											<div class="col-12">
-												<label for="inputChoosePassword" class="form-label">Enter Password</label>
+												<label for="password" class="form-label">Enter Password</label>
 												<div class="input-group" id="show_hide_password">
-													<input type="password" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
+													<input type="password" class="form-control border-end-0" name="password" id="password" value="12345678" placeholder="Enter Password" required> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
 												</div>
 											</div>
 											<div class="col-md-6">
