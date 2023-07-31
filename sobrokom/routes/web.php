@@ -36,8 +36,12 @@ Route::prefix('admin/')->namespace('App\Http\Controllers\Admin')->group(function
     // Admin login route 
     Route::match(['get', 'post'], 'login', 'Admin_controller@login');
     Route::group(['middleware'=>['admin']], function(){
+
         // Admin Dashboard route 
         Route::get('dashboard', 'Admin_controller@dashboard');
+
+        // Admin login route 
+        Route::match(['get', 'post'], 'update_admin_password', 'Admin_controller@updateAdminPassword');
 
         //Admin Logout
         Route::get('logout', 'Admin_controller@logout');

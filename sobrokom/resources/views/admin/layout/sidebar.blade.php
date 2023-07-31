@@ -21,6 +21,26 @@
             </a>
         </li>
         <li class="menu-label">Product Elements</li>
+        <!-- Settings section start -->
+        <li>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class='bx bx-star'></i>
+                </div>
+                <div class="menu-title">Settings</div>
+            </a>
+            <ul>
+                <li>
+                    <a href="{{ url('admin/update_admin_password') }}"><i class="bx bx-right-arrow-alt"></i>Update
+                        password</a>
+                </li>
+                <li>
+                    <a href="{{ url('admin/update_admin_details') }}"><i class="bx bx-right-arrow-alt"></i>Update
+                        details</a>
+                </li>
+            </ul>
+        </li>
+         <!-- Settings section End -->
+         
         <!-- Band section start -->
         <li>
             <a href="javascript:;" class="has-arrow">
@@ -30,14 +50,15 @@
             </a>
             <ul>
                 <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>Add New
-                    Band</a>
+                        Band</a>
                 </li>
                 <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>All Band
-                    List</a>
+                        List</a>
                 </li>
             </ul>
         </li>
         <!-- Band section End -->
+
         <!--category section start -->
         <li>
             <a href="javascript:;" class="has-arrow">
@@ -46,32 +67,40 @@
                 <div class="menu-title">Category Manage</div>
             </a>
             <ul>
-                <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>Add New
-                    Category</a>
+                <li> <a href="admin_category.html"><i class="bx bx-right-arrow-alt"></i>All Category List</a>
                 </li>
-                <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>All Category
-                    List</a>
+                <li> <a href="admin_create_category.html"><i class="bx bx-right-arrow-alt"></i>Add New
+                        Category</a>
                 </li>
             </ul>
         </li>
         <!-- category section end -->
+
         <!-- sub category section start -->
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class='bx bx-merge'></i>
+                <div class="parent-icon"><i class='bx bx-sitemap'></i>
                 </div>
-                <div class="menu-title">SubCategory Manage</div>
+                <div class="menu-title">Sub-Category Manage</div>
             </a>
             <ul>
-                <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>Add New
-                    Sub-Category</a>
+                <li> <a href="admin_create_subCategroy.html"><i class="bx bx-right-arrow-alt"></i>Add New
+                        Sub-Category</a>
                 </li>
-                <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>All Sub-Category
-                    List</a>
+                <li> <a href="admin_subCategroy.html"><i class="bx bx-right-arrow-alt"></i>All Sub-Category
+                        List</a>
+                </li>
+                <li>
+                    <a href="admin_create_innerCategory.html"><i class="bx bx-right-arrow-alt"></i>Add Inner
+                        Category</a>
+                </li>
+                <li>
+                    <a href="admin_innerCategory.html"><i class="bx bx-right-arrow-alt"></i>All Inner Category</a>
                 </li>
             </ul>
         </li>
         <!-- sub category section end -->
+
         <!-- product section start -->
         <li>
             <a href="javascript:;" class="has-arrow">
@@ -81,13 +110,14 @@
             </a>
             <ul>
                 <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>Add New
-                    Product</a>
+                        Product</a>
                 </li>
                 <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>All Product
-                    Details</a>
+                        Details</a>
                 </li>
             </ul>
         </li>
+        <!-- product section end -->
         <!-- product section end -->
         <hr>
         <!-- Other section start -->
@@ -101,10 +131,10 @@
             </a>
             <ul>
                 <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>Add New
-                    Slider</a>
+                        Slider</a>
                 </li>
                 <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>All Slider
-                    List</a>
+                        List</a>
                 </li>
             </ul>
         </li>
@@ -118,10 +148,10 @@
             </a>
             <ul>
                 <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>Add New
-                    Banner</a>
+                        Banner</a>
                 </li>
                 <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>All Banner
-                    List</a>
+                        List</a>
                 </li>
             </ul>
         </li>
@@ -135,10 +165,10 @@
             </a>
             <ul>
                 <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>Add New
-                    Cuppon</a>
+                        Cuppon</a>
                 </li>
                 <li> <a href="#"><i class="bx bx-right-arrow-alt"></i>All Cuppon
-                    List</a>
+                        List</a>
                 </li>
             </ul>
         </li>
@@ -188,19 +218,19 @@
             </a>
             <ul>
                 <li> <a href="#">
-                    <i class="bx bx-right-arrow-alt"></i>pending
+                        <i class="bx bx-right-arrow-alt"></i>pending
                     </a>
                 </li>
                 <li> <a href="#">
-                    <i class="bx bx-right-arrow-alt"></i>Confirmed
+                        <i class="bx bx-right-arrow-alt"></i>Confirmed
                     </a>
                 </li>
                 <li> <a href="#">
-                    <i class="bx bx-right-arrow-alt"></i>Processing
+                        <i class="bx bx-right-arrow-alt"></i>Processing
                     </a>
                 </li>
                 <li> <a href="#">
-                    <i class="bx bx-right-arrow-alt"></i>Delivered
+                        <i class="bx bx-right-arrow-alt"></i>Delivered
                     </a>
                 </li>
             </ul>
