@@ -23,26 +23,20 @@
                     <div class="card-title d-flex align-items-center">
                         <div><i class="bx bxs-user me-1 font-22 text-danger"></i>
                         </div>
-                        <h5 class="mb-0 text-danger">User Registration</h5>
+                        <h5 class="mb-0 text-danger">update admin password</h5>
                     </div>
                     <hr>
                     <form class="row g-3">
-                        <div class="col-md-6">
-                            <label for="inputLastName1" class="form-label">First Name</label>
+                        <div class="col-12">
+                            <label for="inputLastName1" class="form-label">admin username / email</label>
                             <div class="input-group"> <span class="input-group-text bg-transparent"><i class='bx bxs-user'></i></span>
-                                <input type="text" class="form-control border-start-0" id="inputLastName1" placeholder="First Name" />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="inputLastName2" class="form-label">Last Name</label>
-                            <div class="input-group"> <span class="input-group-text bg-transparent"><i class='bx bxs-user'></i></span>
-                                <input type="text" class="form-control border-start-0" id="inputLastName2" placeholder="Last Name" />
+                                <input type="text" class="form-control border-start-0" value="{{$adminDetails['email']}}" readonly="" />
                             </div>
                         </div>
                         <div class="col-12">
-                            <label for="inputPhoneNo" class="form-label">Phone No</label>
-                            <div class="input-group"> <span class="input-group-text bg-transparent"><i class='bx bxs-microphone' ></i></span>
-                                <input type="text" class="form-control border-start-0" id="inputPhoneNo" placeholder="Phone No" />
+                            <label for="inputLastName1" class="form-label">admin type</label>
+                            <div class="input-group"> <span class="input-group-text bg-transparent"><i class='bx bxs-user'></i></span>
+                                <input type="text" class="form-control border-start-0" value="{{$adminDetails['type']}}" readonly="" />
                             </div>
                         </div>
                         <div class="col-12">
@@ -52,20 +46,22 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <label for="inputChoosePassword" class="form-label">Choose Password</label>
+                            <label for="current_password" class="form-label">Current Password</label>
                             <div class="input-group"> <span class="input-group-text bg-transparent"><i class='bx bxs-lock-open' ></i></span>
-                                <input type="text" class="form-control border-start-0" id="inputChoosePassword" placeholder="Choose Password" />
+                                <input type="text" class="form-control border-start-0" id="current_password" name="current_password" placeholder="Enter your current Password" />
                             </div>
                         </div>
                         <div class="col-12">
-                            <label for="inputConfirmPassword" class="form-label">Confirm Password</label>
-                            <div class="input-group"> <span class="input-group-text bg-transparent"><i class='bx bxs-lock' ></i></span>
-                                <input type="text" class="form-control border-start-0" id="inputConfirmPassword" placeholder="Confirm Password" />
+                            <label for="new_password" class="form-label">New Password</label>
+                            <div class="input-group"> <span class="input-group-text bg-transparent"><i class='bx bxs-lock-open' ></i></span>
+                                <input type="text" class="form-control border-start-0" id="new_password" name="new_password" placeholder="Enter new Password" />
                             </div>
                         </div>
                         <div class="col-12">
-                            <label for="inputAddress3" class="form-label">Address</label>
-                            <textarea class="form-control" id="inputAddress3" placeholder="Enter Address" rows="3"></textarea>
+                            <label for="confirm_new_password" class="form-label">Confirm Password</label>
+                            <div class="input-group"> <span class="input-group-text bg-transparent"><i class='bx bxs-lock'></i></span>
+                                <input type="text" class="form-control border-start-0" id="confirm_new_password" name="confirm_new_password" placeholder="Enter Your Password again" />
+                            </div>
                         </div>
                         <div class="col-12">
                             <div class="form-check">
