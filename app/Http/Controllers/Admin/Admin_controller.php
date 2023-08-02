@@ -24,13 +24,13 @@ class Admin_controller extends Controller
             if(Hash::check($data['current_password'], Auth::guard('admin')->user()->password)){
                 // check new password is matching with confirm password
                 if($data['new_password']==$data['confirm_password']){
-                    Admin::where('id', Auth::guard('admin')->user()->id)->update(['password'=>bcyrpt($data['new_password'])]);
-                    return redirect()->back()->with('sucess_message', ' msg1 Your password has been updated sucessfully!');
+                    Admin::where('id', Auth::guard('admin')->user()->id)->update(['password'=>bcrypt($data['new_password'])]);
+                    return redirect()->back()->with('sucess_message', ' Your password has been updated sucessfully!');
                 }else{
-                    return redirect()->back()->with('error_message', 'msg2 Your current password is not matched with confirm password!');
+                    return redirect()->back()->with('error_message', 'Your current password is not matched with confirm password!');
                 }
             }else{
-                return redirect()->back()->with('error_message', 'msg3 Your current password is incorrect!');
+                return redirect()->back()->with('error_message', 'Your current password is incorrect!');
             }
         }     
 
