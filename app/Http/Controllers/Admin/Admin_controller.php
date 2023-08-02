@@ -14,18 +14,36 @@ class Admin_controller extends Controller
         return view('admin.dashboard');
     }
 
-    public function updateAdminPassword()
+    public function updateAdminPassword( Request $request)
     {
-        // echo "<pre>"; print_r(Auth::guard('admin')->user()); die;
+        if ($request->isMethod('post')) {
+            $data = $request->all();
+            // echo "<pre>"; print_r($data); die;
 
+            //check if current password enterd by admin is correct
+            if(Hash::check($data['current_password'], Auth::guard('admin')->user()->password)){
+                // check new password is matching with confirm password
+                if($data['new_password']==$data['confirm_password']){
+                    Admin::where('id', Auth::guard('admin')->user()->id)->update(['password'=>bcyrpt($data['new_password'])]);
+                    return redirect()->back()->with('sucess_message', ' msg1 Your password has been updated sucessfully!');
+                }else{
+                    return redirect()->back()->with('error_message', 'msg2 Your current password is not matched with confirm password!');
+                }
+            }else{
+                return redirect()->back()->with('error_message', 'msg3 Your current password is incorrect!');
+            }
+        }     
+
+        // echo "<pre>"; print_r(Auth::guard('admin')->user()); die;
         $adminDetails = Admin::where ('email', Auth::guard('admin')->user()->email)->first()->toArray();
         return view('admin.settings.update_admin_password')->with(compact('adminDetails'));
     }
+    
     public function checkAdminPassword(Request $request)
     {
         $data = $request->all();
-        // echo "<pre>"; print_r($data); die;
 
+        // echo "<pre>"; print_r($data); die;
         if(Hash::check($data['current_password'], Auth::guard('admin')->user()->password)){
             return 'true';
         }else{

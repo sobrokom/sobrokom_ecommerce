@@ -57,26 +57,26 @@
 										</a> <a href="javascript:;" class="btn btn-facebook"><i
 												class="bx bxl-facebook"></i>Sign in with Facebook</a>
 									</div>
-									<div class="login-separater text-center mb-4"> <span>OR SIGN IN WITH EMAIL</span>
+									<div class="login-separater text-center mb-4"><span>OR SIGN IN WITH EMAIL</span>
 										<hr />
 									</div>
 									<div class="form-body">
 										@if(Session::has('error_message'))
-										<div class="alert alert-danger" role="alert">
-											<strong>{{Session::get('error_message')}}</strong>
-										</div>
+											<div class="alert alert-danger" role="alert">
+												<strong>{{Session::get('error_message')}}</strong>
+											</div>
 										@endif
 
 										@if (count($errors) > 0)
-										<div class="alert alert-danger alert-dismissible fade show" role="alert">
-											
-												@foreach ($errors->all() as $error)
-												<li>{{ $error }}</li>
-												@endforeach
-											<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
+											<div class="alert alert-danger alert-dismissible fade show" role="alert">
+												
+													@foreach ($errors->all() as $error)
+													<li>{{ $error }}</li>
+													@endforeach
+												<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
 										@endif
 
 										<form class="row g-3" action="{{url('admin/login')}}" method="post">@csrf
