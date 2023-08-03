@@ -14,7 +14,7 @@
     <ul class="metismenu" id="menu">
         <li>
             <!-- class="has-arrow" -->
-            <a href="admin_index.html" href="javascript:;">
+            <a href="{{ url('admin/dashboard')}}">
                 <div class="parent-icon"><i class='bx bx-home-circle'></i>
                 </div>
                 <div class="menu-title">Dashboard</div>

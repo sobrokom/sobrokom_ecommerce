@@ -20,6 +20,7 @@
     <link href="{{ url ('admin/assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url ('admin/assets/css/app.css') }}" rel="stylesheet">
     <link href="{{ url ('admin/assets/css/icons.css') }}" rel="stylesheet">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <!-- Theme Style CSS -->
     <link rel="stylesheet" href="{{ url ('admin/assets/css/dark-theme.css') }}" />
     <link rel="stylesheet" href="{{ url ('admin/assets/css/semi-dark.css') }}" />
@@ -72,6 +73,7 @@
             $(".knob").knob();
         });
     </script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <script src="{{ url ('admin/assets/js/index.js') }}"></script>
     <!--app JS-->
     <script src="{{ url ('admin/assets/js/app.js') }}"></script>
